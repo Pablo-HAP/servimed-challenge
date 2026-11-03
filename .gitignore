@@ -1,0 +1,55 @@
+# --- Segredos e configuração local ---
+.env
+.env.*
+!.env.example
+
+# --- Saídas de scraping e arquivos temporários por tarefa ---
+tmp/
+output/
+produtos.json
+*.jsonl
+*.csv
+# Mantém as fixtures de teste versionadas
+!tests/fixtures/**
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# --- Ambientes virtuais (uv, venv) ---
+.venv/
+venv/
+env/
+
+# --- Testes, cobertura e linters ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# --- Scrapy ---
+.scrapy/
+scrapy_cache/
+httpcache/
+
+# --- Celery ---
+celerybeat-schedule
+celerybeat.pid
+dump.rdb
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Editores e sistema operacional ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
