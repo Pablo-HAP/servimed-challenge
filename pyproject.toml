@@ -1,0 +1,34 @@
+[project]
+name = "servimed"
+version = "0.1.0"
+description = "Desafio técnico Cotefácil: scraping da Servimed com Scrapy, Celery e API"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "celery>=5.6.3",
+    "python-dotenv>=1.2.4",
+    "redis>=8.1.0",
+    "requests>=2.34.2",
+    "scrapy>=2.19.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/servimed"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "responses>=0.26.3",
+    "ruff>=0.17.3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
